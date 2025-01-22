@@ -51,7 +51,7 @@
                 </select>
                 <label for="pet passport">Pet Passport (Attach if available):</label>
                 <input type="file" id="pet passport" name="pet passport">
-            </fieldset>
+            </fieldset> <br> <br>
 
             <!-- Submit Buttons -->
             <div class="form-buttons">
