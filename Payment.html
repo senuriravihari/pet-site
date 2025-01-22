@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment form</title>
+    <style>
+        body{
+
+            /* background Image*/
+            background-image: url(pay.jpg);
+       background-repeat: no-repeat;
+       background-attachment: fixed;
+       background-position: center;
+       background-size: cover;
+
+         font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        margin-top: 50px;
+
+        display: grid;
+        place-items: center;
+        height: 300px;
+        margin: 0;
+
+    
+      }
+      #buy{
+        font-size: 24px;
+        font-weight: bold;
+        color:black;
+
+      }
+      #box{
+        
+      }
+      
+    </style>
+</head>
+<body>
+<p id="buy"></p>
+<div class="form-container" id="box">
+    <center>
+<form action="p.process.php" name="payment">
+    Address : <input type="text" name="add" id="dress"> <br><br>
+     Payment Method<select name="method" id="method">
+        <option> Cash</option>
+        <option> Card</option>
+    </select> <br><br>
+    Phone No: <input type="text" id="num" name="bur"> <br><br>
+    <input type="reset" value="reset" name="clear" id="res">
+    <input type="submit" value="Get Contact" id="call" name="sub">
+
+
+
+
+</form> </center></div>
+
+<script>
+       const text = "Thank you for buying  a lovely pet.";
+
+let index = 0;
+
+function textbuy(){
+ if(index<text.length){
+   document.getElementById("buy").innerHTML += text.charAt(index);
+   index++;
+   setTimeout(textbuy,100);
+ }
+}
+textbuy();
+
+</script>
+</body>
+</html>
