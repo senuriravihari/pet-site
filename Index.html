@@ -20,13 +20,18 @@
 
     }
 
-    #d{
+   /* #d{
       background-color: white;
 
-    }
+    }*/
    .navbar-nav .nav-link:active{
       background-color: green;
     }
+
+    .navbar-nav .nav-link:hover 
+    {
+  background-color: rgb(141, 231, 141);
+  }
     
   .navbar {
   position: fixed;
@@ -38,9 +43,11 @@
   justify-content: space-between;
   align-items: center;
   z-index: 100;
-  background-color: rgba(128, 128, 128, 0.5); 
-  backdrop-filter: blur(5px); 
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.5); 
+   backdrop-filter: blur(5px); 
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+   
+  
 }
 .navbar-brand {
         font-size: 1.5rem; 
@@ -56,7 +63,10 @@
       }
 
       .nav-link {
+       color: grey;
         margin-left: 1rem; 
+        transition: color 0.2s ease-in-out;
+
       }
 
   </style>
