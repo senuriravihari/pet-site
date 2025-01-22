@@ -1,0 +1,77 @@
+<html>
+  <head>
+    <title> Contact Us</title>
+    <style>
+      body{
+       background-image: url(Dogc.jpg);
+       background-repeat: no-repeat;
+       background-attachment: fixed;
+       background-position: center;
+       background-size: cover;
+        /*for text*/
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        margin-top: 50px;
+
+    
+      }
+      #typing{
+        font-size: 24px;
+        font-weight: bold;
+        color:white;
+
+      }
+      
+      
+      
+        button:hover{
+          background-color: green;
+        }
+        button:active{
+          background-color: lawngreen;
+        }
+        
+        #Whatsapp{
+          height: 100px;
+          width: 300px;
+        }
+        #t{
+
+          color: white;
+        }
+
+
+      
+    </style>
+  </head>
+  <body>
+    <!-- Auto text-->
+     <h2 id="t">Our Address</h2>
+     <p id="typing"></p>
+     <!--box-->
+    <div id="boxw">
+       <center> <button id="Whatsapp">
+        <a herf="https://wa.me/724825186" target="_blank"><h1>Whatsapp </h1></a>
+    </button></center>
+
+    </div>
+   <h2 id="t">Open hours</h2> 
+ <h3 id="t">Monday to Friday  8.00a.m-5.00p.m</h3>
+
+    <!--Js part for text-->
+    <script>
+       const text = "No 123 , New road, Colombo 2";
+
+       let index = 0;
+
+       function typeText(){
+        if(index<text.length){
+          document.getElementById("typing").innerHTML += text.charAt(index);
+          index++;
+          setTimeout(typeText,200);
+        }
+       }
+       typeText();
+    </script>
+  </body>
+</html>
