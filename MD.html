@@ -194,7 +194,7 @@ body::before {
 
     <div class="form-container">
         <h2>Pet Registration Form</h2>
-        <form name="Medical" method="post" onsubmit="return validateform()">
+        <form name="Medical" method="post" onsubmit="return validateform()" action="MD.php">
            
             <fieldset>
                 <legend>Personal Information</legend>
@@ -234,8 +234,7 @@ body::before {
                     <option value="yes">Yes</option>
                     <option value="no">No</option>
                 </select>
-                <label for="petPassport">Pet Passport (Attach if available):</label>
-                <input type="file" id="petPassport" name="petPassport">
+                
             </fieldset>
 
             <div class="form-buttons">
