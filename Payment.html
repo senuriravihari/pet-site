@@ -6,43 +6,150 @@
     <title>Payment form</title>
     <style>
         body {
-            background-image: url(pay.jpg);
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-position: center;
-            background-size: cover;
-            font-family: Arial, Helvetica, sans-serif;
-            text-align: center;
-            margin-top: 50px;
-            display: grid;
-            place-items: center;
-            height: 300px;
-            margin: 0;
+                 background-image: url(payment.jpg);
+                 background-repeat: no-repeat;
+                 background-attachment: fixed;
+                 background-position: center;
+                 background-size: cover;
+                 font-family: Arial, Helvetica, sans-serif;
+                 text-align: left;
+                 margin-top: 50px;
+                 display: grid;
+                 place-items: center;
+                 height: 300px;
+                 margin: 1;
         }
+
         #buy {
-            font-size: 24px;
-            font-weight: bold;
-            color: black;
+                font-size: 25px;
+                font-weight: bold;
+                color: white;
         }
+
         #box {
+                width: 400px;               
+                height: 450px;             
+                background-color: white; 
+                color: black;               
+                border: 2px solid grey;;     
+                padding: 20px;              
+                box-sizing: border-box;     
+                border-radius: 10px;        
+                text-align: left;        
+                box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
         }
+
+        #res{
+                padding: 3px 10px; 
+                font-size: 1rem; 
+                background-color: red;
+                color: black; 
+                border: none; 
+                border-radius: 5px; 
+                cursor: pointer; 
+                transition: background-color 0.3s ease;
+                width: 200px;
+        }
+
+        #res:hover {
+            background-color: lightcoral; 
+        }
+
+        #reset:focus {
+            outline: none; 
+            box-shadow: white;
+        }
+
+        #call{
+                padding: 3px 10px; 
+                font-size: 1rem; 
+                background-color: green;
+                color: black; 
+                border: none; 
+                border-radius: 5px; 
+                cursor: pointer; 
+                width: 200px;
+                
+        }
+
+        #call:hover {
+            background-color: lightgreen; 
+        }
+
+        #call:focus {
+            outline: none; 
+            box-shadow: white;
+        }
+
+        #dress{
+                padding: 15px 20px;
+                font-size: 1; 
+                background-color: white;
+                color: black; 
+                border: none; 
+                border-radius: 5px; 
+                cursor: pointer; 
+                transition: background-color 0.3s ease;
+                text-align: center;
+                
+        }
+        #dress:hover {
+            background-color: green; 
+        }
+
+        #method{
+                padding: 15px 20px;
+                font-size: 1; 
+                background-color: white;
+                color: black; 
+                border: none; 
+                border-radius: 5px; 
+                cursor: pointer; 
+               
+                text-align: center;
+                width: 200px;
+        }
+
+        #method:hover {
+                background-color: green; 
+        }
+
+        #num{
+                padding: 3px 5px;
+                font-size: 1; 
+                background-color: white;
+                color: black; 
+                border: none; 
+                border-radius: 5px; 
+                cursor: pointer; 
+                transition: background-color 0.3s ease;
+                text-align: center;
+        }
+
+        #num:hover {
+            background-color: green; 
+    }
     </style>
 </head>
 <body>
 <p id="buy"></p>
-<div class="form-container" id="box">
+<div class="form-container" id="box" >
     <center>
-    <form name="payment" onsubmit="return validateForm()" action="p.process.html">
-        Address: <input type="text" name="add" id="dress"><br><br>
-        Payment Method
+    <form name="payment" onsubmit="return validateForm()" action="p.process.php">
+        Address: <input type="text" name="add" id="dress" placeholder="Enter your address"><br><br>
+        <br>
+        Payment Method:
         <select name="method" id="method">
             <option value="">Select</option>
             <option value="Cash">Cash</option>
             <option value="Card">Card</option>
         </select><br><br>
-        Phone No: <input type="text" id="num" name="bur"><br><br>
+        <br>
+        Phone No: <input type="text" id="num" name="bur" placeholder="Enter your number"><br><br>
+        <br>
+        
+        <input type="submit" value="Get Contact" id="call" name="sub"><br><br>
         <input type="reset" value="Reset" name="clear" id="res">
-        <input type="submit" value="Get Contact" id="call" name="sub">
     </form>
     </center>
 </div>
